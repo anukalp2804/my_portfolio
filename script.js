@@ -40,7 +40,7 @@ setInterval(() => {
 
 // Typing effect for role text (one at a time)
 const roleElement = document.querySelector('.content h3');
-const roles = ["Learning Java Fullstack"];
+const roles = ["Forntend Deverloper" ,"Learning Java Fullstack"];
 let roleIndex = 0;
 let charIndex = 0;
 let typingForward = true;
