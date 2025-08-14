@@ -450,6 +450,7 @@ body {
 .about-box h3 {
   color: var(--accent-color);
   margin-bottom: 5px;
+  margin-top: 1px;
 }
 
 .about-box p {
@@ -498,6 +499,9 @@ body {
     width: 200px;
     height: 200px;
   }
+  .icon,.about-box h3 {
+    text-align: center;
+  }
 
   .about-content {
     width: 100%;
@@ -508,7 +512,7 @@ body {
   .about-boxes {
   display: flex;
   gap: 30px;
-  justify-content: left;
+  justify-content: center;
   }
 
   .about-box {
