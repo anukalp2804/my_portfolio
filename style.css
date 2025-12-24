@@ -602,7 +602,7 @@ h1, h2, h3, h4 { font-family: var(--font-display); }
 .contact-info p { color: var(--text-muted); margin-bottom: 40px; font-size: 1.05rem; line-height: 1.6; }
 
 .email-box {
-  display: flex; align-items: center; gap: 20px;
+  display: flex; align-items: center; gap: 15px;
   background: rgba(112, 0, 255, 0.05); padding: 20px; border-radius: 15px;
   border: 1px solid var(--border-color); margin-bottom: 40px; transition: var(--transition);
 }
@@ -611,7 +611,7 @@ h1, h2, h3, h4 { font-family: var(--font-display); }
 .email-box i { font-size: 2rem; color: var(--primary); }
 
 .email-content { display: flex; flex-direction: column; }
-.email-content span { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 2px; }
+.email-content span { font-size: 0.7rem; color: var(--text-muted); margin-bottom: 2px; }
 .email-link {
   font-size: 1.2rem; font-weight: 600; color: var(--text-main);
   text-decoration: none; transition: 0.2s;
@@ -724,15 +724,16 @@ h1, h2, h3, h4 { font-family: var(--font-display); }
     width: auto; text-align: left; transform: none;
     letter-spacing: 5px; opacity: 0.12;
   }
-  .watermark-tg, .watermark-sg, .watermark-cg, .watermark-dg, .watermark-eg {
+  .watermark-tg, .watermark-cg, .watermark-dg, .watermark-eg {
     font-size: 3rem; font-weight: 900; pointer-events: none;
     transform: none; letter-spacing: 10px; opacity: 0.12; left: 2%;
   }
+  .watermark-sg { font-size: 2rem;}
   .watermark-tg { top: 5%; font-size: 4rem; }
-  .watermark-sg { top: 13%; }
-  .watermark-cg { top: 18%; left: 1%; }
+  .watermark-sg { top: 14%; }
+  .watermark-cg { top: 16.5%; left: 1%; }
   .watermark-eg { top: 8.54%; left: 1%; }
-  .watermark-dg { top: 27.4%; left: 1%; }
+  .watermark-dg { top: 23.4%; left: 1%; }
 
   /* Navbar */
   .hamburger { display: block; z-index: 1001; }
