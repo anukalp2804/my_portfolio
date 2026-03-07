@@ -540,38 +540,252 @@ h1, h2, h3, h4 { font-family: var(--font-display); }
 .nav-btn:hover { background: var(--primary); color: #fff; transform: scale(1.1); }
 
 /* =========================================
-   9. GITHUB SECTION
+   9. GITHUB SECTION (Responsive Top Bar)
 ========================================= */
 .github-container {
   background: var(--bg-card); 
-  backdrop-filter: blur(var(--card-blur)); -webkit-backdrop-filter: blur(var(--card-blur));
-  border: 1px solid var(--border-color); border-radius: 20px;
-  padding: 30px; text-align: center; transition: var(--transition);
-  position: relative; z-index: 2;
+  backdrop-filter: blur(var(--card-blur)); 
+  -webkit-backdrop-filter: blur(var(--card-blur));
+  border: 1px solid var(--border-color); 
+  border-radius: 20px;
+  padding: 30px; 
+  text-align: center; 
+  transition: var(--transition);
+  position: relative; 
+  z-index: 2;
 }
-.github-container:hover { border-color: var(--primary); transform: translateY(-5px); box-shadow: var(--shadow); }
+.github-container:hover { 
+  border-color: var(--primary); 
+  box-shadow: var(--shadow); 
+}
+
 [data-theme="light"] .github-container {
   background: rgba(255, 255, 255, 0.15); 
-  border: 1px solid rgba(0, 0, 0, 0.05); box-shadow: 0 10px 40px rgba(0,0,0,0.05);
+  border: 1px solid rgba(0, 0, 0, 0.05); 
+  box-shadow: 0 10px 40px rgba(0,0,0,0.05);
 }
 
+/* --- NEW: TOP BAR STYLES --- */
+.github-top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px; /* Space between bar and graph */
+  flex-wrap: wrap; 
+  gap: 15px;
+}
+
+.gh-left-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Org Buttons (Apache, Owasp) */
+.gh-org-btn {
+  color: var(--text-main);
+  border: 1px solid var(--border-color);
+  padding: 6px 18px;
+  border-radius: 20px; /* Pill shape */
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: var(--transition);
+  background: rgba(255, 255, 255, 0.03); 
+}
+.gh-org-btn:hover {
+  border-color: var(--primary);
+  background: var(--primary);
+  color: #fff;
+  transform: translateY(-2px);
+}
+[data-theme="light"] .gh-org-btn { background: rgba(0,0,0,0.02); }
+
+/* Dropdown Menu (More Button) */
+.gh-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.gh-more-btn {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border-color);
+  color: var(--text-main);
+  border-radius: 8px; /* Slightly square like your image */
+  width: 34px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: var(--transition);
+}
+.gh-more-btn:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+[data-theme="light"] .gh-more-btn { background: rgba(0,0,0,0.02); }
+
+/* --- DROPDOWN CONTAINER (Scrolling Fixed Here) --- */
+.gh-dropdown-content {
+  display: none;
+  position: absolute;
+  top: 120%;
+  left: 0;
+  background: var(--bg-card);
+  min-width: 140px;
+  box-shadow: 0px 10px 30px rgba(0,0,0,0.3);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  z-index: 100;
+  flex-direction: column;
+  text-align: left;
+  
+  /* Scrolling Properties applied to the main box */
+  max-height: 220px; 
+  overflow-y: auto;  
+  overflow-x: hidden; 
+}
+
+/* Custom Scrollbar for Dropdown */
+.gh-dropdown-content::-webkit-scrollbar {
+  width: 6px;
+}
+.gh-dropdown-content::-webkit-scrollbar-track {
+  background: transparent;
+}
+.gh-dropdown-content::-webkit-scrollbar-thumb {
+  background-color: var(--primary); 
+  border-radius: 10px;
+}
+
+/* Show dropdown on hover (Desktop) */
+.gh-dropdown:hover .gh-dropdown-content { display: flex; }
+
+/* Show dropdown on tap (Mobile JS trigger) */
+.gh-dropdown-content.show-menu {
+  display: flex !important;
+}
+
+/* Dropdown Links */
+.gh-dropdown-content a {
+  color: var(--text-main);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  font-size: 0.9rem;
+  transition: background 0.2s;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+.gh-dropdown-content a:last-child { border-bottom: none; }
+.gh-dropdown-content a:hover {
+  background: rgba(112, 0, 255, 0.1); /* Subtle primary color highlight */
+  color: var(--primary);
+}
+
+/* Center Text */
+.gh-center-text p {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+/* GitHub Icon */
+.gh-right-actions .gh-icon-btn {
+  color: var(--text-main);
+  font-size: 1.6rem;
+  transition: var(--transition);
+  display: inline-block;
+}
+.gh-right-actions .gh-icon-btn:hover {
+  color: var(--primary);
+  transform: scale(1.1);
+}
+
+/* --- GRAPH STYLES --- */
 .graph-wrapper { 
-  overflow-x: auto; padding-bottom: 20px; margin-bottom: 20px; 
-  scrollbar-width: thin; scrollbar-color: var(--primary) transparent;
+  overflow-x: auto; 
+  padding-bottom: 15px; 
+  scrollbar-width: thin; 
+  scrollbar-color: var(--primary) transparent;
+  display: flex;
+  justify-content: center; /* Ensures graph stays centered */
 }
-.gh-chart { width: 100%; min-width: 600px; }
+.gh-chart { 
+  width: 100%; 
+  min-width: 600px; 
+  max-width: 850px; 
+  margin: 0 auto; 
+}
 
-.gh-stats { 
-  display: flex; justify-content: space-around; flex-wrap: wrap; 
-  gap: 20px; border-top: 1px solid var(--border-color); padding-top: 20px; margin-top: 20px;
+
+/* =========================================
+   MEDIA QUERIES (Mobile Responsiveness)
+========================================= */
+@media screen and (max-width: 900px) {
+  /* On tablets, let the layout wrap naturally */
+  .github-top-bar {
+    justify-content: center;
+  }
+  .gh-center-text {
+    order: -1; /* Pushes the text to the top line */
+    width: 100%;
+    margin-bottom: 10px;
+  }
 }
-.gh-stat-box { 
-  display: flex; flex-direction: column; align-items: center; gap: 5px; 
-  padding: 10px 20px; border-radius: 10px; transition: 0.3s;
+
+@media screen and (max-width: 600px) {
+  .github-container {
+    padding: 30px 10px; /* Reduced side padding to give elements more room */
+  }
+
+  .github-top-bar {
+    display: flex;
+    flex-direction: row; /* Forces the left and right actions onto the same line */
+    flex-wrap: nowrap;   /* Prevents wrapping to a second line */
+    justify-content: center; 
+    align-items: center;
+    gap: 10px; /* Space between the button group and the Github icon */
+  }
+  
+  .gh-left-actions {
+    display: flex;
+    flex-direction: row; 
+    justify-content: center; 
+    align-items: center;
+    width: auto; /* Reset from 100% so it only takes up needed space */
+    flex-wrap: nowrap; 
+    gap: 8px; /* Tighter gap between the 3 buttons */
+  }
+  
+  /* Shrink buttons a bit more so all 4 elements fit on tiny screens */
+  .gh-org-btn {
+    font-size: 0.8rem;
+    padding: 6px 10px;
+  }
+  .gh-more-btn {
+    width: 32px;
+    height: 32px;
+  }
+
+  /* Center the expanded Dropdown box */
+  .gh-dropdown-content {
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: 140px;
+  }
+
+  .gh-right-actions {
+    display: flex;
+    justify-content: center;
+    width: auto; /* Reset from 100% */
+  }
+  
+  /* Adjust Github Icon size to match the button height */
+  .gh-right-actions .gh-icon-btn {
+    font-size: 2rem; 
+  }
 }
-.gh-stat-box i { font-size: 1.8rem; color: var(--secondary); margin-bottom: 5px; }
-.gh-stat-box h3 { font-size: 1.5rem; margin: 0; color: var(--text-main); }
-.gh-stat-box p { margin: 0; font-size: 0.9rem; color: var(--text-muted); }
 
 /* =========================================
    10. CONTACT SECTION
@@ -617,18 +831,6 @@ h1, h2, h3, h4 { font-family: var(--font-display); }
   text-decoration: none; transition: 0.2s;
 }
 .email-link:hover { color: var(--primary); }
-
-.footer-socials { display: flex; gap: 20px; }
-.footer-socials a {
-  width: 50px; height: 50px; border-radius: 50%;
-  background: var(--bg-card); border: 1px solid var(--border-color);
-  display: flex; align-items: center; justify-content: center;
-  color: var(--text-muted); font-size: 1.2rem; transition: var(--transition);
-}
-.footer-socials a:hover {
-  background: var(--primary); color: #fff;
-  border-color: var(--primary); transform: translateY(-5px) rotate(10deg);
-}
 
 .contact-form { display: flex; flex-direction: column; gap: 25px; }
 .form-group { position: relative; }

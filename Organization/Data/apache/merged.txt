@@ -1,0 +1,11 @@
+https://github.com/apache/iotdb/pull/17234
+https://github.com/apache/iotdb/pull/17129
+https://github.com/apache/maven/pull/11680
+https://github.com/apache/maven/pull/11651
+https://github.com/apache/maven-release/pull/1450
+https://github.com/apache/maven-release/pull/1448
+https://github.com/apache/maven-release/pull/1447
+https://github.com/apache/maven/pull/11599
+https://github.com/apache/maven/pull/11579
+https://github.com/apache/maven/pull/11569
+https://github.com/apache/maven-scm/pull/1343

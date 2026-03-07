@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apache Contributions | Anukalp</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body data-theme="dark">
+
+    <div class="bg-gradient-overlay"></div>
+    <div class="bg-watermark">APACHE</div>
+
+    <header class="page-header">
+        <a href="../../index.html" class="back-link">← Back</a>
+        <h1 class="apache-title">APACHE <span class="highlight">Dashboard</span></h1>
+        
+        <div class="header-actions">
+            <a href="https://github.com/anukalp2804" target="_blank"rel="noopener noreferrer"  class="github-btn" aria-label="GitHub Profile" rel="noopener noreferrer">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                </svg>
+            </a>
+            <button id="theme-toggle" class="theme-btn">☀️</button>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="action-grid">
+            <button class="filter-btn" data-file="../Data/apache/merged.txt">Merged PRs</button>
+            <button class="filter-btn" data-file="../Data/apache/pending.txt">Pending PRs</button>
+            <button class="filter-btn" data-file="../Data/apache/issue.txt">Issues</button>
+            
+        </div>
+
+        <div id="data-display" class="data-list-area">
+            <div class="placeholder-box">
+                <p>Select a category to view live contributions.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="apache-footer">
+        <p>&copy; 2026 Anukalp Pandey | Apache Software Foundation</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
