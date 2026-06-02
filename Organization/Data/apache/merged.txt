@@ -9,3 +9,8 @@ https://github.com/apache/maven/pull/11599
 https://github.com/apache/maven/pull/11579
 https://github.com/apache/maven/pull/11569
 https://github.com/apache/maven-scm/pull/1343
+https://github.com/apache/maven-build-cache-extension/pull/444
+https://github.com/apache/iotdb/pull/17632
+https://github.com/apache/iotdb/pull/17385
+https://github.com/apache/iotdb/pull/17382
+https://github.com/apache/iotdb/pull/17274

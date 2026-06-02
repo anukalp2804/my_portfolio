@@ -1,0 +1,3 @@
+https://github.com/apache/iotdb/issues/17740
+https://github.com/apache/iotdb/issues/17594
+https://github.com/apache/maven-scm/issues/1344

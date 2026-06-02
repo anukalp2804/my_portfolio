@@ -9,3 +9,8 @@
  https://github.com/OWASP/Nest/pull/3070
  https://github.com/OWASP/Nest/pull/3068
  https://github.com/OWASP/Nest/pull/4540
+ https://github.com/OWASP/Nest/pull/4567
+ https://github.com/OWASP/Nest/pull/4574
+ https://github.com/OWASP/Agent-Security-Regression-Harness/pull/55
+ https://github.com/OWASP/Agent-Security-Regression-Harness/pull/75
+ https://github.com/OWASP/Nest/pull/4540
