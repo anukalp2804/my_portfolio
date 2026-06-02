@@ -13,3 +13,4 @@
  https://github.com/OWASP/Nest/pull/4574
  https://github.com/OWASP/Agent-Security-Regression-Harness/pull/55
  https://github.com/OWASP/Agent-Security-Regression-Harness/pull/75
+ https://github.com/OWASP/Nest/pull/4540
