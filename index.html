@@ -1,28 +1,49 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en" data-theme="dark" data-palette="gold">
 <head>
   <meta charset="UTF-8" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://gc.zgo.at; style-src 'self'; font-src 'self'; img-src 'self' data: https:; connect-src 'self' https://api.web3forms.com https://*.goatcounter.com; object-src 'none'; base-uri 'self'; form-action 'self' https://api.web3forms.com" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Anukalp Pandey | Backend Developer</title>
-  <title>Anukalp Pandey Portfolio</title>
+  <meta name="description" content="Portfolio of Anukalp Pandey, a backend-focused developer skilled in Java, Python, Node.js and SQL with 40+ merged open-source pull requests, including Apache and OWASP." />
+  <meta name="theme-color" content="#0c0b14" />
+  <meta name="author" content="Anukalp Pandey" />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Anukalp Pandey | Backend Developer" />
+  <meta property="og:description" content="Backend developer and open-source contributor. Java, Python, Node.js, SQL." />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='24' fill='%23f59e0b'/%3E%3Ctext x='50' y='70' font-size='56' font-weight='700' text-anchor='middle' fill='%231f1b2e' font-family='Arial'%3EA%3C/text%3E%3C/svg%3E" />
+  <script src="theme-init.js"></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Anukalp Pandey",
+    "jobTitle": "Backend Developer",
+    "description": "Backend-focused Computer Science graduate and open-source contributor (Apache, OWASP).",
+    "knowsAbout": ["Java", "Python", "JavaScript", "Node.js", "SQL", "MongoDB", "API development", "Open source"]
+  }
+  </script>
+  <noscript><link rel="stylesheet" href="noscript.css"></noscript>
   
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="vendor/fonts/fonts.css">
+  <link rel="stylesheet" href="vendor/fontawesome/css/all.min.css">
   
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <canvas id="particle-canvas"></canvas>
+  <a href="#about" class="skip-link">Skip to content</a>
+  <div class="scroll-progress" aria-hidden="true"></div>
+  <canvas id="particle-canvas" aria-hidden="true"></canvas>
 
-  <nav class="navbar">
+  <nav class="navbar" aria-label="Main navigation">
     <div class="container nav-container">
       <a href="#" class="logo">ANUKALP<span class="dot">.</span></a>
       
       <div class="nav-right">
-        <ul class="nav-menu">
+        <ul class="nav-menu" id="nav-menu">
           <li><a href="#about" class="nav-link">About</a></li>
           <li><a href="#skills" class="nav-link">Skills</a></li>
           <li><a href="#projects" class="nav-link">Projects</a></li>
@@ -34,11 +55,11 @@
           <i class="fas fa-moon"></i>
         </button>
 
-        <div class="hamburger">
+        <button class="hamburger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-menu">
           <span class="bar"></span>
           <span class="bar"></span>
           <span class="bar"></span>
-        </div>
+        </button>
       </div>
     </div>
   </nav>
@@ -46,39 +67,100 @@
   <header class="hero">
     <div class="container hero-container">
       <div class="hero-content hidden-left">
+        <span class="badge"><i class="fas fa-code" aria-hidden="true"></i> Backend Developer &middot; Open Source</span>
         <h1 class="hero-title">Hi There, <br> I'm <span class="gradient-text">Anukalp Pandey</span></h1>
-        <h2 class="hero-subtitle-text">Love to <span class="typing-text">Learn and Build/Code</span></h2>
+        <h2 class="hero-subtitle-text">Love to <span class="typing-text" id="typing-text">Learn and Build/Code</span></h2>
         <p class="hero-description">
           <strong>Backend-focused</strong> Computer Science graduate skilled in <strong>Java, Python, JavaScript, Node.js, SQL, and MongoDB</strong> with hands-on experience in <strong>API development, open-source contribution</strong>, and scalable application development. Contributed <strong>40+ merged pull requests</strong> and passionate about backend engineering and problem solving.
         </p>
         
         <div class="hero-buttons">
           <a href="#projects" class="btn btn-primary">View Work</a>
-          <a href="image/Pandey_Anukalp_Resume.pdf" target="_blank" class="btn btn-outline">Resume <i class="fas fa-download"></i></a>
+          <a href="image/Pandey_Anukalp_Resume.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Resume <i class="fas fa-download"></i></a>
         </div>
         
         <div class="social-links">
           <a href="https://github.com/anukalp2804" target="_blank" rel="noopener noreferrer" title="GitHub"><i class="fab fa-github"></i></a>
-          <a href="https://www.linkedin.com/in/anukalp-pandey-55941b281/" target="_blank" rel="noopener noreferrer" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-          <a href="https://www.instagram.com/its.anukalp__?igsh=YnFvdnF6aTdobGJx" target="_blank" rel="noopener noreferrer" title="Instagram"><i class="fab fa-instagram"></i></a>
-          <a href="https://x.com/pan29261?t=0TvidzWs5mbuGYv8JGBySw&s=08" target="_blank" rel="noopener noreferrer" title="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.linkedin.com/in/anukalp-pandey/" target="_blank" rel="noopener noreferrer" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://www.instagram.com/its.anukalp__" target="_blank" rel="noopener noreferrer" title="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://x.com/pan29261" target="_blank" rel="noopener noreferrer" title="Twitter"><i class="fab fa-twitter"></i></a>
+        </div>
+
+        <div class="hero-stats">
+          <div class="stat"><span class="stat-num" data-count="40" data-suffix="+">40+</span><span class="stat-label">Merged PRs</span></div>
+          <div class="stat"><span class="stat-num" data-count="2">2</span><span class="stat-label">Open-source orgs</span></div>
+          <div class="stat"><span class="stat-num" data-count="5">5</span><span class="stat-label">Projects</span></div>
+          <div class="stat"><span class="stat-num" data-count="9">9</span><span class="stat-label">Certifications</span></div>
         </div>
       </div>
 
       <div class="hero-image hidden-right">
-        <div class="img-wrapper">
-          <div class="blob-bg"></div>
-          <img src="image/anukalp.jpg" alt="Anukalp Pandey" class="profile-pic">
-          <div class="float-badge icon-java"><i class="fab fa-java"></i></div>
-          <div class="float-badge icon-python"><i class="fab fa-python"></i></div>
-          <div class="float-badge icon-code"><i class="fas fa-code"></i></div>
+        <div class="hero-visual">
+          <div class="code-window">
+            <div class="cw-bar" aria-hidden="true">
+              <span class="cw-dot cw-r"></span><span class="cw-dot cw-y"></span><span class="cw-dot cw-g"></span>
+              <span class="cw-file">anukalp.js</span>
+            </div>
+            <pre class="cw-code" role="img" aria-label="Code snippet: Anukalp Pandey is a backend developer working with Java, Python, Node.js, SQL and MongoDB, contributing to Apache and OWASP with over 40 merged pull requests."><code>
+<span class="cw-line"><span class="tk-k">const</span> <span class="tk-v">anukalp</span> <span class="tk-p">=</span> <span class="tk-p">{</span></span>
+<span class="cw-line">  <span class="tk-key">role</span><span class="tk-p">:</span> <span class="tk-s">"Backend Developer"</span><span class="tk-p">,</span></span>
+<span class="cw-line">  <span class="tk-key">stack</span><span class="tk-p">:</span> <span class="tk-p">[</span><span class="tk-s">"Java"</span><span class="tk-p">,</span> <span class="tk-s">"Python"</span><span class="tk-p">,</span> <span class="tk-s">"Node.js"</span><span class="tk-p">],</span></span>
+<span class="cw-line">  <span class="tk-key">data</span><span class="tk-p">:</span> <span class="tk-p">[</span><span class="tk-s">"SQL"</span><span class="tk-p">,</span> <span class="tk-s">"MongoDB"</span><span class="tk-p">],</span></span>
+<span class="cw-line">  <span class="tk-key">openSource</span><span class="tk-p">:</span> <span class="tk-p">[</span><span class="tk-s">"Apache"</span><span class="tk-p">,</span> <span class="tk-s">"OWASP"</span><span class="tk-p">],</span></span>
+<span class="cw-line">  <span class="tk-key">mergedPRs</span><span class="tk-p">:</span> <span class="tk-n">"40+"</span><span class="tk-p">,</span></span>
+<span class="cw-line"><span class="tk-p">};</span></span>
+<span class="cw-line"><span class="cw-cursor"></span></span>
+</code></pre>
+          </div>
+
+          <div class="hv-chip hv-chip-1"><i class="fas fa-code-merge" aria-hidden="true"></i> Apache contributor</div>
+          <div class="hv-chip hv-chip-2"><i class="fas fa-shield-halved" aria-hidden="true"></i> OWASP contributor</div>
+
+          <div class="hv-avatar">
+            <span class="hv-initials" aria-hidden="true">AP</span>
+            <img src="image/anukalp.jpg" alt="Anukalp Pandey" width="104" height="104" decoding="async" fetchpriority="high">
+          </div>
         </div>
       </div>
     </div>
   </header>
 
+  <div class="tech-marquee" role="region" aria-label="Technologies I work with">
+    <div class="marquee-track">
+      <ul class="marquee-group">
+        <li>Java</li>
+        <li>Python</li>
+        <li>JavaScript</li>
+        <li>Node.js</li>
+        <li>SQL</li>
+        <li>MongoDB</li>
+        <li>Git &amp; GitHub</li>
+        <li>GitHub Actions</li>
+        <li>Jenkins</li>
+        <li>JUnit</li>
+        <li>HTML5</li>
+        <li>CSS3</li>
+      </ul>
+      <ul class="marquee-group" aria-hidden="true">
+        <li>Java</li>
+        <li>Python</li>
+        <li>JavaScript</li>
+        <li>Node.js</li>
+        <li>SQL</li>
+        <li>MongoDB</li>
+        <li>Git &amp; GitHub</li>
+        <li>GitHub Actions</li>
+        <li>Jenkins</li>
+        <li>JUnit</li>
+        <li>HTML5</li>
+        <li>CSS3</li>
+      </ul>
+    </div>
+  </div>
+
   <section id="about" class="section about-section">
-    <div class="watermark-tg">ABOUT</div>
+    <div class="watermark-tg" aria-hidden="true">ABOUT</div>
+    <h2 class="sr-only">About me</h2>
 
     <div class="container about-container">
       <div class="left-sidebar hidden-left">
@@ -89,7 +171,7 @@
     </svg>
   </a>
 
-  <a href="https://www.geeksforgeeks.org/profile/##update latter link" target="_blank" rel="noopener noreferrer" title="GeeksforGeeks" class="custom-svg-icon">
+  <a href="https://www.geeksforgeeks.org/profile/realan8o1a" target="_blank" rel="noopener noreferrer" title="GeeksforGeeks" class="custom-svg-icon">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
       <path d="M12 0L1.5 6v12L12 24l10.5-6V6L12 0zm0 2.12l8.5 4.86v10.04L12 21.88l-8.5-4.86V6.98L12 2.12zM11.25 7v2h1.5V7h-1.5zm0 3v2h1.5v-2h-1.5zm0 3v2h1.5v-2h-1.5zM7 10v2h3v-2H7zm0 3v2h3v-2H7zm7-3v2h3v-2h-3zm0 3v2h3v-2h-3z"/>
     </svg>
@@ -112,19 +194,42 @@
         </p>
 </div>
 
-      <div class="about-image hidden-right">
-        <img src="image/image.png" alt="Astronaut" class="astronaut-img">
-      </div>
+      <ul class="focus-bento hidden-right" role="list" aria-label="Focus areas">
+        <li class="bento-tile bento-main">
+          <span class="bento-big">40+</span>
+          <h3>Merged pull requests</h3>
+          <p>Open-source work across Apache and OWASP, plus six merged PRs during Hacktoberfest.</p>
+          <div class="bento-chips"><span>Apache</span><span>OWASP</span><span>Hacktoberfest</span></div>
+        </li>
+        <li class="bento-tile">
+          <i class="fas fa-server" aria-hidden="true"></i>
+          <h3>Backend Development</h3>
+          <p>APIs, databases and scalable applications.</p>
+        </li>
+        <li class="bento-tile">
+          <i class="fas fa-robot" aria-hidden="true"></i>
+          <h3>AI Agents</h3>
+          <p>Multi-agent apps, like my Interview Coach project.</p>
+        </li>
+        <li class="bento-tile bento-wide">
+          <i class="fas fa-diagram-project" aria-hidden="true"></i>
+          <div>
+            <h3>DSA &amp; System Design</h3>
+            <p>Currently learning, to turn complex logic into scalable applications.</p>
+          </div>
+        </li>
+      </ul>
     </div>
   </section>
 
   <!-- skill section -->
   <section id="skills" class="section skills-section">
-    <div class="watermark-sg">CREDENTIALS</div>
+    <div class="watermark-sg" aria-hidden="true">CREDENTIALS</div>
+    <h2 class="sr-only">Skills and certifications</h2>
 
     <div class="container">
       <!-- <h2 class="section-heading hidden-up">Tech Arsenal</h2> -->
-      <p class="section-sub hidden-up" style="font-family: 'Courier New', monospace;">My technical expertise and certifications.</p>
+      <p class="section-sub section-sub--mono hidden-up">My technical expertise and certifications.</p>
       
       <div class="arsenal-grid hidden-up">
         
@@ -142,7 +247,7 @@
             <span class="skill-tag">Python</span>
           </div>
 
-          <button class="plus-btn" onclick="openModal('skillsModal')" title="View Full Tech Stack">
+          <button class="plus-btn" data-modal-open="skillsModal" title="View Full Tech Stack">
             <i class="fas fa-plus"></i>
           </button>
         </div>
@@ -161,7 +266,7 @@
             <div class="cert-mini-item"><i class="fas fa-medal"></i>Python</div>
           </div>
 
-          <button class="plus-btn" onclick="openModal('certsModal')" title = "View All Certifications">
+          <button class="plus-btn" data-modal-open="certsModal" title="View All Certifications">
             <i class="fas fa-plus"></i>
           </button>
         </div>
@@ -170,11 +275,11 @@
     </div>
   </section>
 
-  <div id="skillsModal" class="modal-overlay">
+  <div id="skillsModal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="skillsModalTitle">
   <div class="modal-content wireframe-modal">
-    <button class="close-modal" onclick="closeModal('skillsModal')" aria-label="Close Modal" title="Close">&times;</button>
+    <button class="close-modal" data-modal-close="skillsModal" aria-label="Close Modal" title="Close">&times;</button>
     
-    <h2 class="wireframe-header">
+    <h2 class="wireframe-header" id="skillsModalTitle">
       FULL_TECH_STACK
     </h2>
     
@@ -218,11 +323,11 @@
   </div>
 </div>
 
-  <div id="certsModal" class="modal-overlay">
+  <div id="certsModal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="certsModalTitle">
     <div class="modal-content wireframe-modal">
-      <button class="close-modal" onclick="closeModal('certsModal')">&times;</button>
+      <button class="close-modal" data-modal-close="certsModal" aria-label="Close Modal" title="Close">&times;</button>
       
-      <h2 class="wireframe-header">
+      <h2 class="wireframe-header" id="certsModalTitle">
        CERTIFICATIONS_LOG
       </h2>
       
@@ -336,17 +441,18 @@
 <!-- Project section -->
 
   <section id="projects" class="section projects">
-    <div class="watermark-cg"><b>PROJECTS</b></div>
+    <div class="watermark-cg" aria-hidden="true"><b>PROJECTS</b></div>
+    <h2 class="sr-only">Projects</h2>
 
     <div class="container">
       <!-- <h2 class="section-heading hidden-up">Featured Projects</h2> -->
-      <p class="section-sub hidden-up" style="font-family: 'Courier New', monospace;">Building AI and Modern Web Solutions</p>
+      <p class="section-sub section-sub--mono hidden-up">Building AI and Modern Web Solutions</p>
       <div class="project-carousel-wrapper">
-        <div class="project-track" id="projectTrack">
+        <div class="project-track" id="projectTrack" tabindex="0" role="region" aria-label="Projects carousel">
           
           <div class="project-card hidden-up">
             <div class="project-img">
-              <img src="image/multi agent coach.png" alt="Multi AI Interview Coach Agent">
+              <img loading="lazy" decoding="async" src="image/multi agent coach.png" alt="Multi AI Interview Coach Agent">
               <div class="overlay">
                 <a href="https://github.com/anukalp2804/Multi-Ai-Interview-Coach-Agent" target="_blank" rel="noopener noreferrer" title="Source Code"><i class="fab fa-github"></i></a>
               </div>
@@ -365,7 +471,7 @@
 
           <div class="project-card hidden-up">
             <div class="project-img">
-              <img src="image/attendance.png" alt="Realtime Face Attendance System">
+              <img loading="lazy" decoding="async" src="image/attendance.png" alt="Realtime Face Attendance System">
               <div class="overlay">
                 <a href="https://github.com/anukalp2804/Realtime-Face-Attendance-System" target="_blank" rel="noopener noreferrer" title="Source Code"><i class="fab fa-github"></i></a>
               </div>
@@ -384,7 +490,7 @@
 
           <div class="project-card hidden-up">
             <div class="project-img">
-              <img src="image/LMS.png" alt="Library Management System">
+              <img loading="lazy" decoding="async" src="image/LMS.png" alt="Library Management System">
               <div class="overlay">
                 <a href="https://github.com/anukalp2804/Library-Management-System-using-Java" target="_blank" title="Source Code" rel="noopener"><i class="fab fa-github"></i></a>
               </div>
@@ -403,7 +509,7 @@
 
           <div class="project-card hidden-up">
             <div class="project-img">
-              <img src="image/calender.png" alt="Modern Three-Panel Calendar">
+              <img loading="lazy" decoding="async" src="image/calender.png" alt="Modern Three-Panel Calendar">
               <div class="overlay">
                 <a href="https://github.com/anukalp2804/Modern-Three-Panel-Flask-Calendar" target="_blank" rel="noopener noreferrer" title="Source Code"><i class="fab fa-github"></i></a>
               </div>
@@ -422,19 +528,19 @@
 
           <div class="project-card hidden-up">
             <div class="project-img">
-              <img src="image/todo.png" alt="React Todo List">
+              <img loading="lazy" decoding="async" src="image/register.png" alt="Authentication-Gateway">
               <div class="overlay">
-                <a href="#" target="_blank" title="Source Code"><i class="fab fa-github"></i></a>
+                <a href="https://github.com/anukalp2804/Authentication-Gateway" target="_blank" rel="noopener noreferrer" title="Source Code"><i class="fab fa-github"></i></a>
               </div>
             </div>
             <div class="project-info">
               <div class="project-top">
-                <h3>React Todo List</h3>
+                <h3>Authentication Gateway</h3>
                 <i class="fab fa-github"></i>
               </div>
-              <p>A responsive task management tool built with React and Tailwind CSS, featuring efficient state management for adding, editing, and tracking daily tasks.</p>
+              <p>A secure authentication gateway for managing user login and registration with seamless integration across multiple services.</p>
               <div class="tags">
-                <span>React.js</span><span>Vite</span><span>Tailwind CSS</span>
+                <span>React.js</span><span>Vite</span><span>CSS</span>
               </div>
             </div>
           </div>
@@ -443,8 +549,8 @@
       </div>
 
       <div class="project-navigation hidden-up">
-        <button class="nav-btn" id="prevBtn"><i class="fas fa-chevron-left" title="View Project "></i></button>
-        <button class="nav-btn" id="nextBtn"><i class="fas fa-chevron-right" title="View Project"></i></button>
+        <button class="nav-btn" id="prevBtn" type="button" aria-label="Previous project"><i class="fas fa-chevron-left" aria-hidden="true"></i></button>
+        <button class="nav-btn" id="nextBtn" type="button" aria-label="Next project"><i class="fas fa-chevron-right" aria-hidden="true"></i></button>
       </div>
 
     </div>
@@ -453,7 +559,8 @@
 
 <!-- github section    -->
 <section id="github-stats" class="section github-section">
-  <div class="watermark-dg">GITHUB</div>
+  <div class="watermark-dg" aria-hidden="true">GITHUB</div>
+    <h2 class="sr-only">Open source contributions</h2>
 
   <div class="container">
      <p class="section-sub gh-centered-text">My contributions and activity on GitHub.</p>
@@ -467,7 +574,7 @@
           <a href="Organization/Owasp/index.html" class="gh-org-btn">Owasp</a>
           
           <div class="gh-dropdown">
-            <button class="gh-more-btn" title="More Options"><i class="fas fa-ellipsis-v"></i></button>
+            <button class="gh-more-btn" type="button" title="More Options" aria-label="More options" aria-haspopup="true" aria-expanded="false"><i class="fas fa-ellipsis-v"></i></button>
             <div class="gh-dropdown-content">
               <a href="#">Documentations</a>
             </div>
@@ -483,7 +590,7 @@
       </div>
 
       <div class="graph-wrapper">
-         <img src="https://ghchart.rshah.org/7000ff/anukalp2804" alt="GitHub Contribution Graph" class="gh-chart">
+         <img src="https://ghchart.rshah.org/7000ff/anukalp2804" alt="GitHub Contribution Graph" class="gh-chart" loading="lazy">
       </div>
       
     </div>
@@ -494,7 +601,7 @@
 
   <!-- contact section  -->
   <section id="contact" class="section contact">
-    <div class="watermark-eg">CONTACT</div>
+    <div class="watermark-eg" aria-hidden="true">CONTACT</div>
 
     <div class="container">
       <h2 class="section-heading hidden-up">Get In Touch</h2>
@@ -509,27 +616,30 @@
              <i class="fas fa-envelope-open-text"></i>
              <div class="email-content">
                <span>Contact me at</span>
-               <a href="mailto:realanukalp@gmail.com" class="email-link">Mail</a>
+               <a href="#contactForm" class="email-link" data-email-user="realanukalp" data-email-domain="gmail.com">Mail</a>
              </div>
           </div>
         </div>
 
         <div class="contact-form-container">
           <form class="contact-form" id="contactForm">
+            <!-- Web3Forms access key: paste YOUR key as the value (they e-mail it to you). It is public by design - see README. -->
             <input type="hidden" name="access_key" value="a0b55652-0a63-414b-8795-e6e06f6ba522">
+            <input type="checkbox" name="botcheck" class="botcheck" tabindex="-1" autocomplete="off" aria-hidden="true">
             <div class="form-group">
-                <input type="text" name="name" id="name" required placeholder=" ">
+                <input type="text" name="name" id="name" required maxlength="100" placeholder=" " autocomplete="name">
                 <label for="name">Your Name</label>
             </div>
             <div class="form-group">
-                <input type="email" name="email" id="email" required placeholder=" ">
+                <input type="email" name="email" id="email" required maxlength="254" placeholder=" " autocomplete="email">
                 <label for="email">Your Email</label>
             </div>
             <div class="form-group">
-                <textarea name="message" id="message" rows="5" required placeholder=" "></textarea>
+                <textarea name="message" id="message" rows="5" required maxlength="3000" placeholder=" "></textarea>
                 <label for="message">Message</label>
             </div>
             <button type="submit" class="btn btn-primary submit-btn">Send Message <i class="fas fa-paper-plane"></i></button>
+            <p class="form-status" role="status" aria-live="polite"></p>
           </form>
         </div>
 
@@ -540,14 +650,15 @@
     <div class="container footer-container">
       
       <div class="footer-text">
-        <p>
-          Designed & Built by
-          <div class="footer-name">Anukalp Pandey</div>
-        </p>
+        <p>Designed &amp; Built by <span class="footer-name">Anukalp Pandey</span></p>
       </div>
+      <p class="copyright">&copy; <span id="year">2026</span> Anukalp Pandey. All rights reserved.</p>
     </div>
   </footer>
 
+  <a href="#top" class="back-to-top" aria-label="Back to top"><i class="fas fa-arrow-up" aria-hidden="true"></i></a>
+
   <script src="script.js"></script>
+  <script src="analytics.js" defer></script>
 </body>
 </html>

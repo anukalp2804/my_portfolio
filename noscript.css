@@ -1,0 +1,2 @@
+/* Shown only when JavaScript is switched off: the scroll animations start invisible, so make everything visible. */
+.hidden-left, .hidden-right, .hidden-up { opacity: 1 !important; transform: none !important; }

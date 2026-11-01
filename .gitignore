@@ -1,0 +1,16 @@
+# Never commit secrets. Anything in a public repository is public forever (even after you delete it).
+.env
+.env.*
+*.pem
+*.key
+*.p12
+*.pfx
+secrets/
+credentials*.json
+service-account*.json
+
+# Editor / OS clutter
+.DS_Store
+Thumbs.db
+.vscode/
+node_modules/
