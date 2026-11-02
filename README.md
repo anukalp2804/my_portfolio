@@ -84,3 +84,4 @@ Visitor statistics (if you enable them) use no cookies and collect no personal d
 - The **personal content** (texts, photos, resume, certificates, project descriptions and screenshots, the `Data/` lists) is © 2026 Anukalp Pandey, all rights reserved. See [NOTICE.md](NOTICE.md).
 - Third-party components (Font Awesome Free, Outfit, Space Grotesk) keep their own licences, listed in [NOTICE.md](NOTICE.md) and inside `vendor/`.
 - Apache and OWASP are trademarks of their owners; this site is not affiliated with them.
+>>>>>>> upstream/master

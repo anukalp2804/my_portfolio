@@ -1,0 +1,205 @@
+:root {
+    --owasp-cyan: #00a3e0; /* OWASP Brand Color */
+    --bg-color: #0d1117;
+    --text-color: #ffffff;
+    --card-bg: rgba(22, 27, 34, 0.8);
+    --border-color: rgba(255, 255, 255, 0.1);
+    
+    /* GitHub Icon: Black background, White icon in Dark Mode */
+    --git-bg: #000000;
+    --git-color: #ffffff;
+}
+
+[data-theme="light"] {
+    --bg-color: #f0f2f5;
+    --text-color: #1c1e21;
+    --card-bg: rgba(255, 255, 255, 0.9);
+    --border-color: rgba(0, 0, 0, 0.1);
+    
+    /* GitHub Icon: White background, Black icon in Light Mode */
+    --git-bg: #ffffff;
+    --git-color: #000000;
+}
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: 0.3s ease;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+/* --- OWASP Styled Background --- */
+.bg-gradient-overlay {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: radial-gradient(circle at 10% 20%, rgba(0, 163, 224, 0.05) 0%, transparent 40%);
+    z-index: -2;
+    pointer-events: none;
+}
+
+.bg-watermark {
+    position: fixed;
+    top: 55%; left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 18vw;
+    font-family: 'Montserrat';
+    opacity: 0.03;
+    z-index: -1;
+    pointer-events: none;
+    font-weight: 800;
+}
+
+/* Header Section */
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 5%;
+    background: var(--card-bg);
+    border-bottom: 1px solid var(--border-color);
+    backdrop-filter: blur(15px);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.back-link { text-decoration: none; color: var(--owasp-cyan); font-weight: 600; font-size: 0.95rem; }
+.owasp-title { font-family: 'Montserrat'; font-size: 1.4rem; margin: 0; letter-spacing: -0.5px; }
+.highlight { color: var(--owasp-cyan); }
+
+/* GitHub Button Styling */
+.github-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 38px;
+    height: 38px;
+    background-color: var(--git-bg);
+    color: var(--git-color);
+    border-radius: 50%;
+    text-decoration: none;
+    border: 1px solid var(--border-color);
+    transition: transform 0.3s ease, background-color 0.3s, color 0.3s;
+}
+
+.github-btn:hover { transform: scale(1.1); }
+
+/* Theme Button Styling */
+.theme-btn {
+    background: var(--owasp-cyan);
+    border: none;
+    color: white;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 163, 224, 0.3);
+}
+
+.container {
+    flex: 1;
+    max-width: 900px;
+    margin: 2.5rem auto;
+    padding: 0 1.5rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.action-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-bottom: 2.5rem;
+}
+
+.filter-btn {
+    padding: 0.9rem;
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    color: var(--text-color);
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filter-btn:hover, .filter-btn.active {
+    background: var(--owasp-cyan);
+    color: white;
+    border-color: var(--owasp-cyan);
+    box-shadow: 0 8px 25px rgba(0, 163, 224, 0.3);
+    transform: translateY(-2px);
+}
+
+.contribution-item {
+    background: var(--card-bg);
+    padding: 1.1rem 1.4rem;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+    border-left: 4px solid var(--owasp-cyan);
+    display: flex;
+    align-items: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    animation: fadeIn 0.4s ease;
+}
+
+.data-link {
+    color: var(--text-color);
+    text-decoration: none;
+    word-break: break-all;
+    width: 100%;
+    font-weight: 500;
+    transition: 0.2s;
+}
+
+.data-link:hover { color: var(--owasp-cyan); }
+
+.placeholder-box {
+    text-align: center;
+    padding: 5rem 1rem;
+    opacity: 0.4;
+    border: 2px dashed var(--border-color);
+    border-radius: 16px;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.owasp-footer {
+    text-align: center;
+    padding: 1.5rem 1rem;
+    opacity: 0.5;
+    font-size: 0.75rem;
+    border-top: 1px solid var(--border-color);
+    width: 100%;
+    box-sizing: border-box;
+    line-height: 1.5;
+}
+
+/* --- Mobile Responsiveness --- */
+@media (max-width: 768px) {
+    .page-header { padding: 1rem 4%; }
+    .owasp-title { font-size: 1.1rem; }
+    .back-link { font-size: 0.85rem; }
+    .header-actions { gap: 8px; }
+    .github-btn, .theme-btn { width: 34px; height: 34px; }
+
+    .action-grid {
+        grid-template-columns: 1fr;
+        gap: 0.8rem;
+    }
+}
