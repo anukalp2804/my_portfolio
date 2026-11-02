@@ -19,7 +19,7 @@
 (function () {
   'use strict';
 
-  var GOATCOUNTER_CODE = '';   // <-- your GoatCounter code goes here, e.g. 'anukalp'
+  var GOATCOUNTER_CODE = 'anukalp';   // <-- your GoatCounter code goes here, e.g. 'anukalp'
 
   // Not set up (or an invalid value): do nothing and send nothing anywhere.
   if (!/^[a-z0-9-]{2,}$/i.test(GOATCOUNTER_CODE)) return;
