@@ -28,13 +28,7 @@ a contact form, optional private visitor statistics and a strict Content-Securit
 
 - [Features](#features)
 - [Tech stack](#tech-stack)
-- [Quick start](#quick-start)
-- [Customise it](#customise-it)
-- [Project structure](#project-structure)
-- [Deploy](#deploy)
-- [Before you publish](#before-you-publish)
 - [Security and privacy](#security-and-privacy)
-- [Browser support and testing](#browser-support-and-testing)
 - [Licence](#licence)
 
 ## Features
@@ -65,6 +59,24 @@ a contact form, optional private visitor statistics and a strict Content-Securit
 | Contact form | [Web3Forms](https://web3forms.com) (no backend needed) |
 | Visitor statistics (optional) | [GoatCounter](https://www.goatcounter.com) |
 | Tooling | One Python 3 script (`check-before-publish.py`), no packages to install |
+
+## Security and privacy
+
+A website is public: everything in its HTML, CSS, JavaScript and data files can be read by any visitor. What matters is what you put there.
+
+| Item | Public? | Guidance |
+|---|---|---|
+| Social links, links to public pull requests | Yes, by design | Nothing to hide. Protect the accounts with two-step login (2FA). |
+| Web3Forms `access_key` | Yes, by design (an alias for your inbox) | Keep the honeypot, add a captcha if spam appears, replace the key if abused. |
+| E-mail address | Only if written in the page | Stored in two halves and joined on click. Best protection: use only the form. |
+| Passwords, private keys, API secrets | **Never** in this project | Keep them on a server (environment variables) and never in Git. |
+
+Protections built in: strict Content-Security-Policy, no third-party code or fonts, no inline scripts, text from data files is rendered as plain text,
+`rel="noopener noreferrer"` on external links, limits on form fields, and a `.gitignore` that keeps secret files out of Git.
+No website can honestly be called unhackable; the biggest remaining risks are stolen accounts and secrets pushed to a public repository,
+so turn on 2FA for GitHub, your host, your domain registrar and your inbox. See [SECURITY.md](SECURITY.md) and [DOCUMENTATION.md](DOCUMENTATION.md#9-security).
+
+Visitor statistics (if you enable them) use no cookies and collect no personal data, and the numbers are visible only in your own GoatCounter dashboard.
 
 ## Licence
 
