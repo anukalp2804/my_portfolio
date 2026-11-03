@@ -74,7 +74,7 @@ A website is public: everything in its HTML, CSS, JavaScript and data files can 
 Protections built in: strict Content-Security-Policy, no third-party code or fonts, no inline scripts, text from data files is rendered as plain text,
 `rel="noopener noreferrer"` on external links, limits on form fields, and a `.gitignore` that keeps secret files out of Git.
 No website can honestly be called unhackable; the biggest remaining risks are stolen accounts and secrets pushed to a public repository,
-so turn on 2FA for GitHub, your host, your domain registrar and your inbox. See [SECURITY.md](SECURITY.md) and [DOCUMENTATION.md](DOCUMENTATION.md#9-security).
+so turn on 2FA for GitHub, your host, your domain registrar and your inbox. See [SECURITY.md](SECURITY.md).
 
 Visitor statistics (if you enable them) use no cookies and collect no personal data, and the numbers are visible only in your own GoatCounter dashboard.
 
