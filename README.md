@@ -4,7 +4,7 @@ A fast, responsive and accessible personal portfolio built with plain **HTML, CS
 It has dark and light themes, four colour palettes, dedicated pages for open-source contributions (Apache, OWASP),
 a contact form, optional private visitor statistics and a strict Content-Security-Policy.
 
-**Live site:** [https://YOUR-DOMAIN](https://anukalpportfolio.netlify.app/)
+**Live site:** (https://anukalpportfolio.netlify.app/)
 
 ![Home page, dark theme](docs/screenshots/home-dark.jpg)
 
