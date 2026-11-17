@@ -1,5 +1,0 @@
-User-agent: *
-Allow: /
-
-# After you publish, add your real address and uncomment:
-# Sitemap: https://YOUR-DOMAIN/sitemap.xml
