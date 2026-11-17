@@ -4,7 +4,7 @@ A fast, responsive and accessible personal portfolio built with plain **HTML, CS
 It has dark and light themes, four colour palettes, dedicated pages for open-source contributions (Apache, OWASP),
 a contact form, optional private visitor statistics and a strict Content-Security-Policy.
 
-**Live site:** https://YOUR-DOMAIN &nbsp;·&nbsp; **Licence:** [MIT](LICENSE) (code only, see [NOTICE.md](NOTICE.md))
+**Live site:** [https://YOUR-DOMAIN](https://anukalpportfolio.netlify.app/)
 
 ![Home page, dark theme](docs/screenshots/home-dark.jpg)
 
@@ -29,7 +29,6 @@ a contact form, optional private visitor statistics and a strict Content-Securit
 - [Features](#features)
 - [Tech stack](#tech-stack)
 - [Security and privacy](#security-and-privacy)
-- [Licence](#licence)
 
 ## Features
 
@@ -77,11 +76,3 @@ No website can honestly be called unhackable; the biggest remaining risks are st
 so turn on 2FA for GitHub, your host, your domain registrar and your inbox. See [SECURITY.md](SECURITY.md).
 
 Visitor statistics (if you enable them) use no cookies and collect no personal data, and the numbers are visible only in your own GoatCounter dashboard.
-
-## Licence
-
-- The **source code** is released under the [MIT licence](LICENSE).
-- The **personal content** (texts, photos, resume, certificates, project descriptions and screenshots, the `Data/` lists) is © 2026 Anukalp Pandey, all rights reserved. See [NOTICE.md](NOTICE.md).
-- Third-party components (Font Awesome Free, Outfit, Space Grotesk) keep their own licences, listed in [NOTICE.md](NOTICE.md) and inside `vendor/`.
-- Apache and OWASP are trademarks of their owners; this site is not affiliated with them.
-
